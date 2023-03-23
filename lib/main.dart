@@ -7,6 +7,7 @@ import 'package:mintravat_project/logout/logout_view.dart';
 import 'package:mintravat_project/profile/edit_profiel_view.dart';
 import 'package:mintravat_project/task/task_view.dart';
 import 'package:mintravat_project/time_sheet/time_sheet_view.dart';
+import 'home/bottom_bar.dart';
 void main(){
   runApp(const Myapp(
     
@@ -19,7 +20,7 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return   MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home_view(),
+      home : Home_view(),
       routes: {
         'all_employee':(context) =>  const all_employee(),
         'logout' :(context) =>  const logout(),
@@ -30,3 +31,4 @@ class Myapp extends StatelessWidget {
     );
   }
 }
+

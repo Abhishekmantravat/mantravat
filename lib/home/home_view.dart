@@ -117,39 +117,59 @@ class _Home_viewState extends State<Home_view> {
           ],
         ),
       ),
-    body: Container(
-        child: Center(child: Text("Chat")),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.grey.shade600,
-        selectedLabelStyle: TextStyle(fontWeight: FontWeight.w600),
-        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w600),
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.message),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.group_work),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_box),
-          ),
-        ],
-      ),
-      
-      
-      //  Column(children: <Widget>[
-      //   const Text('Align Button to the Bottom in Flutter'),
-      //   Expanded(
-      //       child: Align(
-      //           alignment: Alignment.bottomCenter,
-      //           child: ElevatedButton(
-      //               onPressed: () {}, child: const Text('Bottom Button!'))))
-      // ])
-
+    body: BasicBottomNavBar()
     );
   }
 }
+class BasicBottomNavBar extends StatefulWidget {
+  const BasicBottomNavBar({Key? key}) : super(key: key);
 
+  @override
+  _BasicBottomNavBarState createState() => _BasicBottomNavBarState();
+}
+
+class _BasicBottomNavBarState extends State<BasicBottomNavBar> {
+  int _selectedIndex = 0;
+
+  static const List<Widget> _pages = <Widget>[
+   Text("Home Screen"),
+       Text("Task screen"),
+   Text("Chat screen"),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+     
+      body: Center(
+        child: _pages.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+          mouseCursor: SystemMouseCursors.grab,
+
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.task_alt),
+            label: 'Task',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: 'chat',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+      ),
+    );
+  }
+}
