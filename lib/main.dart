@@ -7,7 +7,7 @@ import 'package:mintravat_project/logout/logout_view.dart';
 import 'package:mintravat_project/profile/edit_profiel_view.dart';
 import 'package:mintravat_project/task/task_view.dart';
 import 'package:mintravat_project/time_sheet/time_sheet_view.dart';
-import 'home/bottom_bar.dart';
+import 'home/home_view.dart';
 void main(){
   runApp(const Myapp(
     
