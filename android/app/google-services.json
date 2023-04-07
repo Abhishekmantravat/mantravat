@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "570515445310",
+    "project_id": "send-aeebc",
+    "storage_bucket": "send-aeebc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570515445310:android:d7c6b0e44b8cb647ae636f",
+        "android_client_info": {
+          "package_name": "com.example.mantravat_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570515445310-5aaaeo9a78d3qbmct7srnne88kvun7l2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mantravat_project",
+            "certificate_hash": "4bc24e636d44f1499e84444e5b5a0324585938ef"
+          }
+        },
+        {
+          "client_id": "570515445310-rvf5iv3i0hev2qu112ru6162rosucjts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbq84t9LTJk67AUJ79qYVq8aiVNgREDrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570515445310-ip61tg3hjaukq1ffr32hcoe0vb98vikc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "570515445310-qhl645jcj0h06j2vajgclp6h2cijnmjr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mantravatProject"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
